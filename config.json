@@ -1,0 +1,15 @@
+{
+  "apis": [
+    {
+      "name": "GitHub API",
+      "url": "https://api.github.com",
+      "method": "GET"
+    },
+    {
+      "name": "Weather API",
+      "url": "https://api.open-meteo.com/v1/forecast",
+      "method": "GET"
+    }
+  ],
+  "failure_threshold": 2
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="10">
+<title>API Monitoring Dashboard</title>
+
+<style>
+
+body{
+font-family: Arial;
+}
+
+table{
+border-collapse: collapse;
+width: 60%;
+}
+
+th, td{
+padding:10px;
+border:1px solid black;
+}
+
+.healthy{
+color:green;
+font-weight:bold;
+}
+
+.failed{
+color:red;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>API Monitoring Dashboard</h2>
+
+<table>
+
+<tr>
+<th>API</th>
+<th>Status</th>
+<th>Time</th>
+</tr>
+
+{% for log in logs %}
+
+<tr>
+<td>{{log.api}}</td>
+
+<td class="{% if log.status == 'HEALTHY' %}healthy{% else %}failed{% endif %}">
+{{log.status}}
+</td>
+
+<td>{{log.timestamp}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
