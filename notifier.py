@@ -1,7 +1,7 @@
 import smtplib
 
-EMAIL = "otpmessagesender@gmail.com"
-PASSWORD = "jqzo ffvf ogjd lgmo"
+EMAIL = "abcd@gmail.com"
+PASSWORD = "xxxx xxxx xxxx xxxx"
 RECEIVER_EMAIL = "sinchanagowda4758@gmail.com"
 
 def send_alert(api_name):
